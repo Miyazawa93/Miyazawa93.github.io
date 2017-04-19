@@ -12,7 +12,7 @@ $("#submit").click(function() {
   console.log(uploadCompany);
 
   $.ajax({
-    url: "https://localhost:3000/api/login/staff",
+    url: "https://localhost:3000/api/login/staff&callback=?",
     type: "POST",
     cache: false,
     crossOrigin: true,
