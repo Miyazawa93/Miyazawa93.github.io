@@ -1,0 +1,14 @@
+body {
+    background-image:url('../Images/nordlys.jpg');
+    background-attachment: fixed;
+	background-size:cover;
+	padding: 20px;
+	background-repeat: no-repeat;
+	font-weight: 400;
+	font-size: 50px;
+	color: #ffffff;
+}
+
+header{ 
+     text-align: center; 
+}
