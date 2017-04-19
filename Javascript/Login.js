@@ -12,13 +12,13 @@ $("#submit").click(function() {
   console.log(uploadCompany);
 
   $.ajax({
-    url: "https://localhost:3000/api/login/staff&callback=?",
+    url: "https://localhost:3000/api/login/staff",
     type: "POST",
     cache: false,
     crossOrigin: true,
     headers: {'Content-Type': 'application/json'},
     useDefaultXhrHeader: false,
-    dataType: 'json',
+    dataType: 'jsonp',
     beforeSend: function(xhr) {
       xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
       xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
