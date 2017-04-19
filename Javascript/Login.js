@@ -14,17 +14,17 @@ $("#submit").click(function() {
   $.ajax({
     url: "https://localhost:3000/api/login/staff",
     type: "POST",
-    cache: false,
-    crossOrigin: true,
-    headers: {'Content-Type': 'application/json'},
-    useDefaultXhrHeader: false,
     dataType: 'json',
-//     beforeSend: function(xhr) {
-//       xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
+//     cache: false,
+//     crossOrigin: true,
+    headers: {'Content-Type': 'application/json'},
+//     useDefaultXhrHeader: false,
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
 //       xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 //       xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
 //       xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, Content-Range, Content-Disposition, Content-Description');
-//     },
+    },
     data: {
       "companyid": uploadCompany,
       "email": email,
