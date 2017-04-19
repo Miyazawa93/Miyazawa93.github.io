@@ -31,9 +31,11 @@ $("#submit").click(function() {
       "passwordhash": hashed
     },
     success: function(response) {
+      open("MainPage.html","_self");
       console.log('Successfully retrieved ' + response);
     },
     error: function(response) {
+      e.preventDefault()
       console.log('Failed ' + response.status + ' ' + response.statusText);
     }
   }).done();
