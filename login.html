@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval'
+      https://code.jquery.com/ui/1.11.4/jquery-ui.js https://code.jquery.com/jquery-3.2.1.js https://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js https://localhost:3000/api/login">
+
+<head>
+  <title> Login </title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="CSS/Background.css" type="text/css" />
+  <link rel="stylesheet" href="CSS/Login.css" type="text/css" />
+</head>
+
+<body>
+  <form>
+    <div class="imgcontainer">
+      <img src="./Images/pawn.png" class="avatar">
+    </div>
+
+    <div class="container">
+
+       <label><b>Company: </b></label>
+      <select id="companyID" required>
+      <option value="">Choose a company.. </option> 
+      <option value="85fb2905-cef3-4691-9148-82f39077e425">DND</option>
+      <option value="419bb496-2c5c-4542-886d-ecc679d62d51">Other company</option>
+      </select>
+      <p></p>
+      
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="password" required>
+
+      <button type="submit" value="Login" id="submit">Login</button>
+      <input type="checkbox" checked="checked"> Remember me </input>
+    </div>
+  </form>
+
+  <script type='text/javascript' src="./Javascript/Login.js"></script>
+  <script type='text/javascript' src="./Javascript/md5.js"></script>
+</body>
+</html>
