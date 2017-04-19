@@ -10,6 +10,7 @@ $("#submit").click(function() {
   console.log(password);
   console.log(hashed);
   console.log(uploadCompany);
+  gfhfhgfhgfhgfh
 
   $.ajax({
     url: "https://localhost:3000/api/login/staff",
