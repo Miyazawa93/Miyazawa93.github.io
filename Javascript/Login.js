@@ -25,7 +25,7 @@ $("#submit").click(function() {
       xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
 //       xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, Content-Range, Content-Disposition, Content-Description');
     },
-    data: {
+    jsonData: {
       "companyid": uploadCompany,
       "email": email,
       "passwordhash": hashed
@@ -35,6 +35,7 @@ $("#submit").click(function() {
       console.log('Successfully retrieved ' + response);
     },
     error: function(response) {
+      console.log(response); 
       console.log('Failed ' + response.status + ' ' + response.statusText);
     }
   }).done();
