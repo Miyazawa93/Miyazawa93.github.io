@@ -31,7 +31,7 @@ $("#submit").click(function() {
       "passwordhash": hashed
     },
     success: function(response) {
-      open("MainPage.html","_self");
+//       open("MainPage.html","_self");
       console.log('Successfully retrieved ' + response);
     },
     error: function(response) {
