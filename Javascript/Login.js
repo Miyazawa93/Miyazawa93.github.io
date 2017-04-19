@@ -20,9 +20,9 @@ $("#submit").click(function() {
     headers: {'Content-Type': 'application/json'},
 //     useDefaultXhrHeader: false,
     beforeSend: function(xhr) {
-      xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
+//       xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
 //       xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-//       xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
+      xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
 //       xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, Content-Range, Content-Disposition, Content-Description');
     },
     data: {
@@ -35,7 +35,6 @@ $("#submit").click(function() {
       console.log('Successfully retrieved ' + response);
     },
     error: function(response) {
-      e.preventDefault(); 
       console.log('Failed ' + response.status + ' ' + response.statusText);
     }
   }).done();
