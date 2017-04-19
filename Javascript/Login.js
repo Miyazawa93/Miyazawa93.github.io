@@ -10,7 +10,7 @@ $("#submit").click(function() {
   console.log(password);
   console.log(hashed);
   console.log(uploadCompany);
-  
+
   $.ajax({
     url: "https://localhost:3000/api/login/staff",
     type: "POST",
@@ -18,7 +18,7 @@ $("#submit").click(function() {
     crossOrigin: true,
     headers: {'Content-Type': 'application/json'},
     useDefaultXhrHeader: false,
-    dataType: 'jsonp',
+    dataType: 'json',
     beforeSend: function(xhr) {
       xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
       xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
