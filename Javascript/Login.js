@@ -21,7 +21,7 @@ $("#submit").click(function() {
     dataType: 'json',
     beforeSend: function(xhr) {
       xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
-      xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+//       xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
       xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
       xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, Content-Range, Content-Disposition, Content-Description');
     },
