@@ -35,7 +35,7 @@ $("#submit").click(function() {
       console.log('Successfully retrieved ' + response);
     },
     error: function(response) {
-      e.preventDefault()
+      e.preventDefault(); 
       console.log('Failed ' + response.status + ' ' + response.statusText);
     }
   }).done();
