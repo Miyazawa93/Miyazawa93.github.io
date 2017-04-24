@@ -50,7 +50,7 @@ $("#submit").click(function() {
 //        alert(thrownError); 
 //       console.log(response); 
 //       console.log('Failed ' + response.status + ' ' + response.statusText);
-    }
+    });
   })).then(function(data, textStatus, jqXHR){
     alert(jqXHR.status); 
   }); 
