@@ -23,7 +23,7 @@ $("#submit").click(function() {
     type: "POST",
     dataType: 'json',
     cache: false,
-    crossOrigin: true,
+    crossDomain: true,
     headers: {'Content-Type': 'application/json'},
     useDefaultXhrHeader: false,
     beforeSend: function(xhr) {
