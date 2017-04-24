@@ -45,6 +45,7 @@ $("#submit").click(function() {
     return;
       }
     });
+  }
   })).then(function(data, textStatus, jqXHR){
     alert(jqXHR.status); 
   }); 
