@@ -44,8 +44,8 @@ $("#submit").click(function() {
     error: function(xhr, ajaxOptions, thrownError) {
        alert(xhr.status);             
        alert(thrownError); 
-      console.log(response); 
-      console.log('Failed ' + response.status + ' ' + response.statusText);
+//       console.log(response); 
+//       console.log('Failed ' + response.status + ' ' + response.statusText);
     }
   })).then(function(data, textStatus, jqXHR){
     alert(jqXHR.status); 
