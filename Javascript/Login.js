@@ -11,6 +11,7 @@ $("#submit").click(function() {
   console.log(hashed);
   console.log(uploadCompany);
 
+  $.when (
   $.ajax({
     url: "https://34.209.228.122/api/login/staff",
     type: "POST",
@@ -38,5 +39,7 @@ $("#submit").click(function() {
       console.log(response); 
       console.log('Failed ' + response.status + ' ' + response.statusText);
     }
-  }).done();
+  })).then(function(data, textStatus, jqXHR){
+    alert(jqXHR.status); 
+  }); 
 });
