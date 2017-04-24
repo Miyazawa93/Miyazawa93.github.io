@@ -12,7 +12,7 @@ $("#submit").click(function() {
   console.log(uploadCompany);
 
   $.ajax({
-    url: "https://localhost:3000/api/login/staff",
+    url: "https://34.209.228.122:3000/api/login/staff",
     type: "POST",
     dataType: 'json',
 //     cache: false,
