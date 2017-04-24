@@ -11,6 +11,11 @@ $("#submit").click(function() {
   console.log(hashed);
   console.log(uploadCompany);
 
+  $(document).ajaxError(function(e, jqxhr, settings, exception) {
+  if (jqxhr.readyState == 0 || jqxhr.status == 0) {
+    return; //Skip this error
+  }
+  });
   $.when (
   $.ajax({
     url: "https://34.209.228.122/api/login/staff",
