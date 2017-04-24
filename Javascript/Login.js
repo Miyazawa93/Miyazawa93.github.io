@@ -16,10 +16,10 @@ $("#submit").click(function() {
     url: "https://34.209.228.122/api/login/staff",
     type: "POST",
     dataType: 'json',
-//     cache: false,
-//     crossOrigin: true,
+    cache: false,
+    crossOrigin: true,
     headers: {'Content-Type': 'application/json'},
-//     useDefaultXhrHeader: false,
+    useDefaultXhrHeader: false,
     beforeSend: function(xhr) {
 //       xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
 //       xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -35,9 +35,11 @@ $("#submit").click(function() {
 //       open("MainPage.html","_self");
       console.log('Successfully retrieved ' + response);
     },
-    error: function(response) {
-      console.log(response); 
-      console.log('Failed ' + response.status + ' ' + response.statusText);
+    error: function(xhr, ajaxOptions, thrownError) {
+       alert(xhr.status);             
+      alert(thrownError); 
+//       console.log(response); 
+//       console.log('Failed ' + response.status + ' ' + response.statusText);
     }
   })).then(function(data, textStatus, jqXHR){
     alert(jqXHR.status); 
