@@ -37,7 +37,7 @@ $("#submit").click(function() {
     },
     error: function(xhr, ajaxOptions, thrownError) {
        alert(xhr.status);             
-      alert(thrownError); 
+       alert(thrownError); 
 //       console.log(response); 
 //       console.log('Failed ' + response.status + ' ' + response.statusText);
     }
