@@ -40,18 +40,19 @@ $("#submit").click(function() {
 //       open("MainPage.html","_self");
       console.log('Successfully retrieved ' + response);
     },
-    error:(function(e, jqxhr, settings, exception) {
+    error: function(e, jqxhr, settings, exception) {
   if (jqxhr.readyState == 0 || jqxhr.status == 0) {
-    return; //Skip this error
-  }
-    
-//     function(xhr, ajaxOptions, thrownError) {
-//        alert(xhr.status);             
-//        alert(thrownError); 
-//       console.log(response); 
-//       console.log('Failed ' + response.status + ' ' + response.statusText);
+    return;
+      }
     });
   })).then(function(data, textStatus, jqXHR){
     alert(jqXHR.status); 
   }); 
 });
+
+
+//     function(xhr, ajaxOptions, thrownError) {
+//        alert(xhr.status);             
+//        alert(thrownError); 
+//       console.log(response); 
+//       console.log('Failed ' + response.status + ' ' + response.statusText);
