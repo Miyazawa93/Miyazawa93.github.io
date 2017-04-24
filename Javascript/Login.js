@@ -44,7 +44,6 @@ $("#submit").click(function() {
   if (jqxhr.readyState == 0 || jqxhr.status == 0) {
     return;
       }
-    });
   }
   })).then(function(data, textStatus, jqXHR){
     alert(jqXHR.status); 
